@@ -1,0 +1,33 @@
+h1,h2{
+  color:white;
+}
+body{
+  background-color:black;
+}
+/*.rain{
+  background-image:url("http://icons.iconarchive.com/icons/large-icons/large-weather/256/rain-icon.png");
+  width:10px;
+  height:20px;
+}
+.cloud{
+  background-image:url("http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-12/256/cloud-icon.png");
+  width:10px;
+  height:20px;
+}
+.clear{
+  background-image:url("https://image.flaticon.com/icons/png/128/136/136723.png");
+  width:10px;
+  height:20px;
+}*/
+.rain::before{
+content: '\26CB';
+font-size:50px;
+}
+.cloud::before{
+content: '\2601';
+font-size:50px;
+}
+.clear::before{
+content: '\2600';
+font-size:50px;
+}
