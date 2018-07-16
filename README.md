@@ -1,3 +1,3 @@
 "# WeatherApp" 
-"# FacebookBot" 
-"Training"
+
+It's a simple API 
