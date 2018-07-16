@@ -44,7 +44,6 @@
        //get location using ip-API
        $.getJSON(ipApi,function(json){
 
-
       //var cityname=$("#cityName").get(0);
       /*var c=document.getElementById('forma');
       cityname=c.elements[0].val;
