@@ -7,7 +7,6 @@ showWeather();
 //get User location
 function showWeather(){
  var ipApi="http://ip-api.com/json";
-
  //get location using ip-API
  $.getJSON(ipApi,function(json){
 lat =json.lat;
@@ -35,7 +34,7 @@ $.getJSON(weatherApi,function(json){
    //change background
    if(ctemp>25){
      $('body').css({
-       'background':'url("https://pixabay.com/fr/arbre-solitaire-sunset-117582/")',
+       'background':'url("https://thumb.ibb.co/cvzMKJ/sunset_75621_1920.jpg")',
        'background-size':'cover'
      });
    }else if(ctemp<25){

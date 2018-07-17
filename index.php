@@ -25,9 +25,10 @@
  </div>
 </div>
 
+<div class="container text-center">
 <div class="row">
-  <div class="well col-md-12 col-md-offset-3" id="inf2">
-    <form class="form-inline" action="city.php" id='forma' role="form" method='get'>
+  <div class="well col-md-12 col-lg-12 col-md-offset-3" id="inf2">
+    <form class="form-inline center" action="index.php" id='forma' role="form" method="get">
       <div class="form-group">
         <input type="text" id="cityName" placeholder="Enter your city" name="city" ></input>
         <input type="submit" class="btn btn-default"></input>
@@ -60,14 +61,13 @@
       cityname=document.querySelector('input').value;
 
       $("#cityName").keyup(function(){
-
          //alert($(this).val());
           var citynam=$(this).val();
-          alert(citynam);
       });
       //console.log(globalVar);
       //alert(window.value);
-      var weatherApi2='http://api.openweathermap.org/data/2.5/weather?q='+window.value+'&appid=b8810bfc4f07f9e79bd4d72d2b65c9fa';
+      var spge='<?php echo $_GET['city'] ;?>';
+      var weatherApi2='http://api.openweathermap.org/data/2.5/weather?q='+spge+'&appid=b8810bfc4f07f9e79bd4d72d2b65c9fa';
       console.log(weatherApi2);
       $.getJSON(weatherApi2,function(json){
         console.log(json);
@@ -82,12 +82,12 @@
         html2+="<p>"+mainWea2+"</p>";
         $("#wInfo2").html(html2);
         var tempid2=$("#temp2");
-        tempid.html(ctemp2+"&degC");
+        tempid2.html(ctemp2+"&degC");
 
          //change background
          if(ctemp2>25){
            $('body').css({
-             'background':'url("https://ibb.co/cvzMKJ")',
+             'background':'url("http://www.pocketables.com/images/2012/07/sunny-608x333.jpg")',
              'background-size':'cover'
            });
          }else if(ctemp2<25){
@@ -97,31 +97,33 @@
            });
 
          }
+
           //change icon depending on the weather
-          var iconDiv2=$(".icon2");
+          var icon2Div=$(".icon2");
           switch(mainWea2){
-              case 'Rain': iconDiv.toggleClass('rain');
+              case 'Rain': icon2Div.toggleClass('rain');
                            break;
-              case 'Clouds': iconDiv.toggleClass('cloud');
+              case 'Clouds': icon2Div.toggleClass('cloud');
                            break;
-              case 'Clear': iconDiv.toggleClass('clear');
+              case 'Clear': icon2Div.toggleClass('clear');
                            break;
-              case 'Drizzle': iconDiv.toggleClass('clear');
+              case 'Drizzle': icon2Div.toggleClass('clear');
                             break;
-              default: iconDiv.toggleClass('clear');
+              default: icon2Div.toggleClass('clear');
           }
 
-      });
+  2    });
       });
 
       }
 
-    })
+    });
 </script>
    <div id="wInfo2"></div>
    <button class="btn btn-info" id="temp2"></button>
    <div class="icon2"></div>
   </div>
+</div>
 </div>
 </div>
 
