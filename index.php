@@ -87,7 +87,7 @@
          //change background
          if(ctemp2>25){
            $('body').css({
-             'background':'url("https://pixabay.com/fr/arbre-solitaire-sunset-117582/")',
+             'background':'url("https://ibb.co/cvzMKJ")',
              'background-size':'cover'
            });
          }else if(ctemp2<25){
