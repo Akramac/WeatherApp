@@ -34,7 +34,7 @@ $.getJSON(weatherApi,function(json){
    //change background
    if(ctemp>25){
      $('body').css({
-       'background':'url("https://thumb.ibb.co/cvzMKJ/sunset_75621_1920.jpg")',
+       'background':'url("http://www.pocketables.com/images/2012/07/sunny-608x333.jpg")',
        'background-size':'cover'
      });
    }else if(ctemp<25){
